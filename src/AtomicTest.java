@@ -25,6 +25,7 @@ public class AtomicTest {
             });
             threads[i].start();
         }
+//        因为有主线程和守护线程一直存在，所以值设为2
         while (Thread.activeCount()>2){
             Thread.currentThread().getThreadGroup().list();
             Thread.yield();
