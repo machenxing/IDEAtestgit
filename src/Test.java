@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class Test {
     public static void main(String[] args) {
         int a=5;
@@ -8,6 +12,23 @@ public class Test {
         System.arraycopy(c,3,c,1,3);
         for(int n:c){
             System.out.println(n);
+        }
+        List<String> list = new ArrayList<String>();
+        list.add("1");
+        list.add("2");
+        list.add("1");
+        // 不要在foreach循环里进行元素的remove/add操作，以下注释代码会报错
+        /*for (String item : list) {
+            if ("2".equals(item)) {
+                list.remove(item);
+            }
+        }*/
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            String item = iterator.next();
+            if ("1".equals(item)) {
+                iterator.remove();
+            }
         }
     }
 }
