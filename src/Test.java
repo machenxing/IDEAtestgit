@@ -19,7 +19,7 @@ public class Test {
         list.add("1");
         // 不要在foreach循环里进行元素的remove/add操作，以下注释代码会报错
         /*for (String item : list) {
-            if ("2".equals(item)) {
+            if ("1".equals(item)) {
                 list.remove(item);
             }
         }*/
