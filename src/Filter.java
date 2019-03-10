@@ -17,5 +17,6 @@ public class Filter {
         for (Long l : stream) {
             System.out.println(l);
         }
+//        stream.forEach(System.out::println);
     }
 }
